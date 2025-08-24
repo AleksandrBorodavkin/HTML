@@ -1,0 +1,78 @@
+/* Общие стили для страницы */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Стили для заголовков */
+h1, h2 {
+  font-family: 'Georgia', serif;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    background-color: #34495e;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Стили для абзацев */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Стили для списков */
+ul {
+  list-style-type: square;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Стили для кода и выделения */
+code {
+  background-color: #e8e8e8;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight {
+    background-color: #f1c40f;
+    padding: 0.2rem;
+}
+
+.quote {
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #555;}
+
+/* Контейнер для центрирования контента */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}

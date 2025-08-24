@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    margin: 40px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+dl {
+    margin-left: 0;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+dd {
+    margin-left: 0;
+}
+
+ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}

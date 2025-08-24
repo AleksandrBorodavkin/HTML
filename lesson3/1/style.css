@@ -1,0 +1,27 @@
+body {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+ol {
+    background-color: #edd3d3;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    list-style-position: inside;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+li.selected {
+    background-color: #c57f7f;
+}
+
+li span {
+    background-color: #a34040;
+    padding: 5px 10px;
+    color: white;
+}

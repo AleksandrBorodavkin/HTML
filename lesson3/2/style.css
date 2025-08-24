@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
+
+.task-item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px; /* Space for the icon */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+/* Zebra striping */
+.task-item:nth-child(odd) {
+    background-color: #e0f7fa; /* Lighter blue */
+}
+
+.task-item:nth-child(even) {
+    background-color: #b2ebf2; /* Darker blue */
+}
+
+/* --- ИКОНКИ НЕ НАЙДЕНЫ --- */
+/* --- Поместите файлы 'unchecked_16.png' и 'checked_16.png' в папку 'icons' --- */
+
+/* Unchecked items */
+.task-item {
+    background-image: url('icons/unchecked_16.png');
+}
+
+/* Checked items */
+.task-item.checked {
+    background-color: #e0e0e0; /* Gray background */
+    background-image: url('icons/checked_16.png');
+}
+
+.task-item.checked .task-text {
+    text-decoration: line-through; /* Strikethrough text */
+}
+
+.delete-btn {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
