@@ -5,15 +5,15 @@ body {
 
 ol {
     background-color: #edd3d3;
-    padding: 20px;
-    margin: 20px;
+    padding: 1.25rem;
+    margin: 1.25rem;
     color: #fff;
     list-style-position: inside;
 }
 
 li {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
 }
 
 li.selected {
@@ -22,6 +22,6 @@ li.selected {
 
 li span {
     background-color: #a34040;
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     color: white;
 }
