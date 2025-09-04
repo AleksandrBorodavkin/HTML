@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по Flexbox</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #005a9c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: monospace;
+        }
+        .example-container {
+            display: flex;
+            background-color: #e0e0e0;
+            border: 2px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            min-height: 150px;
+        }
+        .item {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .item-1 { background-color: #007bff; }
+        .item-2 { background-color: #28a745; }
+        .item-3 { background-color: #dc3545; }
+        .item-4 { background-color: #ffc107; color: #333; }
+        .item-5 { background-color: #17a2b8; }
+
+        .section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Шпаргалка по CSS Flexbox</h1>
+
+        <div class="section">
+            <h2>Основы</h2>
+            <p>Flexbox - это модель макета для одномерного расположения элементов в строках или столбцах.</p>
+            <p>Чтобы начать использовать Flexbox, необходимо применить <code>display: flex;</code> к родительскому контейнеру.</p>
+            <pre><code>.container {
+    display: flex;
+}</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Свойства Flex-контейнера</h2>
+
+            <h3><code>flex-direction</code></h3>
+            <p>Определяет направление основной оси (и, следовательно, направление, в котором размещаются flex-элементы).</p>
+            <ul>
+                <li><code>row</code> (по умолчанию): слева направо.</li>
+                <li><code>row-reverse</code>: справа налево.</li>
+                <li><code>column</code>: сверху вниз.</li>
+                <li><code>column-reverse</code>: снизу вверх.</li>
+            </ul>
+            <pre><code>.container {
+    flex-direction: row | row-reverse | column | column-reverse;
+}</code></pre>
+
+            <h3><code>justify-content</code></h3>
+            <p>Выравнивает элементы вдоль основной оси.</p>
+            <ul>
+                <li><code>flex-start</code> (по умолчанию): элементы прижаты к началу.</li>
+                <li><code>flex-end</code>: элементы прижаты к концу.</li>
+                <li><code>center</code>: элементы по центру.</li>
+                <li><code>space-between</code>: первый элемент в начале, последний в конце, остальные равномерно распределены.</li>
+                <li><code>space-around</code>: элементы равномерно распределены с равным пространством вокруг них.</li>
+                <li><code>space-evenly</code>: элементы равномерно распределены с равным пространством между ними.</li>
+            </ul>
+            <pre><code>.container {
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}</code></pre>
+
+            <h3><code>align-items</code></h3>
+            <p>Выравнивает элементы вдоль поперечной оси.</p>
+            <ul>
+                <li><code>stretch</code> (по умолчанию): элементы растягиваются, чтобы заполнить контейнер.</li>
+                <li><code>flex-start</code>: элементы прижаты к началу поперечной оси.</li>
+                <li><code>flex-end</code>: элементы прижаты к концу поперечной оси.</li>
+                <li><code>center</code>: элементы по центру поперечной оси.</li>
+                <li><code>baseline</code>: элементы выровнены по их базовой линии.</li>
+            </ul>
+            <pre><code>.container {
+    align-items: stretch | flex-start | flex-end | center | baseline;
+}</code></pre>
+
+            <h3><code>flex-wrap</code></h3>
+            <p>Определяет, должны ли flex-элементы переноситься на новую строку.</p>
+            <ul>
+                <li><code>nowrap</code> (по умолчанию): все элементы в одной строке.</li>
+                <li><code>wrap</code>: элементы переносятся на несколько строк.</li>
+                <li><code>wrap-reverse</code>: элементы переносятся на несколько строк в обратном порядке.</li>
+            </ul>
+            <pre><code>.container {
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}</code></pre>
+            
+            <h3><code>align-content</code></h3>
+            <p>Выравнивает строки flex-контейнера, когда есть дополнительное пространство на поперечной оси. (Работает только если есть несколько строк, т.е. <code>flex-wrap: wrap</code>).</p>
+            <ul>
+                <li><code>stretch</code> (по умолчанию): строки растягиваются, чтобы занять оставшееся пространство.</li>
+                <li><code>flex-start</code>: строки прижаты к началу.</li>
+                <li><code>flex-end</code>: строки прижаты к концу.</li>
+                <li><code>center</code>: строки по центру.</li>
+                <li><code>space-between</code>: первая строка в начале, последняя в конце, остальные равномерно распределены.</li>
+                <li><code>space-around</code>: строки равномерно распределены с равным пространством вокруг них.</li>
+            </ul>
+            <pre><code>.container {
+    align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+}</code></pre>
+
+            <h3><code>flex-flow</code></h3>
+            <p>Сокращенная запись для <code>flex-direction</code> и <code>flex-wrap</code>.</p>
+            <pre><code>.container {
+    flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;;
+}</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Свойства Flex-элементов</h2>
+
+            <h3><code>order</code></h3>
+            <p>Определяет порядок flex-элементов. По умолчанию 0.</p>
+            <pre><code>.item {
+    order: &lt;integer&gt;; /* например, -1, 0, 1, 2 */
+}</code></pre>
+
+            <h3><code>flex-grow</code></h3>
+            <p>Определяет способность flex-элемента расти, если это необходимо. Принимает безразмерное значение, которое служит пропорцией.</p>
+            <pre><code>.item {
+    flex-grow: &lt;number&gt;; /* например, 1 */
+}</code></pre>
+
+            <h3><code>flex-shrink</code></h3>
+            <p>Определяет способность flex-элемента сжиматься, если это необходимо.</p>
+            <pre><code>.item {
+    flex-shrink: &lt;number&gt;; /* например, 1 */
+}</code></pre>
+
+            <h3><code>flex-basis</code></h3>
+            <p>Определяет размер элемента по умолчанию перед распределением оставшегося пространства.</p>
+            <pre><code>.item {
+    flex-basis: &lt;length&gt; | auto; /* например, 20% или 10rem */
+}</code></pre>
+
+            <h3><code>flex</code></h3>
+            <p>Сокращенная запись для <code>flex-grow</code>, <code>flex-shrink</code> и <code>flex-basis</code>.</p>
+            <pre><code>.item {
+    flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;;
+    /* flex: 0 1 auto; (по умолчанию) */
+    /* flex: 1; (эквивалентно flex: 1 1 0) */
+}</code></pre>
+
+            <h3><code>align-self</code></h3>
+            <p>Позволяет переопределить выравнивание по умолчанию (или указанное в <code>align-items</code>) для отдельного flex-элемента.</p>
+            <pre><code>.item {
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Пример</h2>
+            <div class="example-container" style="justify-content: space-around; align-items: center;">
+                <div class="item item-1" style="flex-grow: 1;">1 (grow: 1)</div>
+                <div class="item item-2" style="align-self: flex-start;">2 (align-self: start)</div>
+                <div class="item item-3" style="order: -1;">3 (order: -1)</div>
+                <div class="item item-4">4</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

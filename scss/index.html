@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по SCSS</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #cc6699; /* SCSS-like color */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 1rem;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        code {
+            font-family: monospace;
+            color: #d14; /* Highlight code */
+        }
+        .section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+        .note {
+            background-color: #e6f7ff;
+            border-left: 4px solid #3399ff;
+            padding: 1rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Шпаргалка по SCSS (Sass)</h1>
+
+        <div class="section">
+            <h2>Что такое SCSS?</h2>
+            <p>SCSS (Sassy CSS) - это синтаксис препроцессора Sass,
+            который расширяет возможности стандартного CSS, добавляя такие функции, как переменные, вложенность, миксины и многое другое.</p>
+            <p>SCSS позволяет писать более структурированный и поддерживаемый CSS-код.</p>
+        </div>          
+        <div class="section">
+            <h2>Основные возможности SCSS</h2>
+
+            <h3>1. Переменные</h3>
+            <p>Переменные позволяют хранить значения, которые можно повторно использовать в вашем CSS.</p>
+            <pre><code>$primary-color: #3498db;
+body {
+    color: $primary-color;
+}
+</code></pre>           
+
+            <h3>2. Вложенность</h3>
+            <p>SCSS позволяет вкладывать селекторы внутри других селекторов, что улучшает читаемость кода.</p>
+            <pre><code>nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+</code></pre>
+
+            <h3>3. Миксины</h3>
+            <p>Миксины позволяют создавать повторно используемые блоки стилей.</p>                      
+            <pre><code>@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}               
+.button {
+    @include border-radius(5px);
+}
+</code></pre>
+        </div>  
+        <div class="section">
+            <h2>Дополнительные возможности SCSS</h2>
+
+            <h3>4. Наследование</h3>
+            <p>SCSS позволяет одному селектору наследовать стили другого с помощью директивы <code>@extend</code>.</p>
+            <pre><code>.message {       
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;        
+}
+.success {
+    @extend .message;
+    border-color: green;
+}
+.error {
+    @extend .message;
+    border-color: red;
+}
+</code></pre>
+            <h3>5. Операции</h3>
+            <p>SCSS поддерживает математические операции с числами, цветами и другими значениями.</p>
+            <pre><code>$base-font-size: 16px;
+$large-font-size: $base-font-size * 1.5;
+body {
+    font-size: $base-font-size;
+}
+.large {
+    font-size: $large-font-size;
+}
+</code></pre>
+        </div>  
+        <div class="section">
+            <h2>Полезные ресурсы</h2>
+            <ul>
+                <li><a href="https://sass-lang.com/guide" target="_blank">Официальное руководство по Sass</a></li>
+                <li><a href="https://sass-lang.com/documentation" target="_blank">Документация по Sass</a></li>
+                <li><a href="https://www.freecodecamp.org/news/sass-tutorial-learn-sass-in-5-minutes/" target="_blank">Sass Tutorial: Learn Sass in 5 Minutes</a></li>
+                <li><a href="https://css-tricks.com/sass/" target="_blank">Sass на CSS-Tricks</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

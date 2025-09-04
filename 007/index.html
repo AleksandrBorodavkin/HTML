@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Подключение Material Symbols от Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Базовые стили для страницы */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #d5d5d9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            margin:1rem;
+        }
+
+        /* Стили для основного контейнера с продуктами */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.9rem; /* Расстояние между блоками продуктов */
+            max-width: 60rem; /* Максимальная ширина контейнера */
+        }
+
+        /* Стили для каждого блока продукта */
+        .product-item {
+            width: 7rem; /* Фиксированная ширина блока */
+            height: 8rem; /* Фиксированная высота блока */
+            padding: 20px 10px;
+            border: 1px solid black;
+            border-radius: 20px; /* Скругленные углы рамки */
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Небольшая тень для объема */
+        }
+
+        /* Стили для иконок Material Symbols */
+        .product-item .material-symbols-outlined {
+            font-size: 48px; /* Размер иконки */
+            color: #555;
+            margin-bottom: 15px; /* Отступ снизу от иконки */
+        }
+
+        /* Стили для названия продукта */
+        .product-item p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Стили для подписи в конце */
+        .footer-text {
+            margin-top: 40px;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Стили для заголовка */
+        .main-title {
+            margin-bottom: 40px;
+            font-size: 24px;
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="main-title">What do I have in my fridge?</h2>
+
+    <div class="products-container">
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Pepper</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Apple</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Cheese</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Corn</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Mushroom</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Garlic</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Beef</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Fish</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Eggs</p>
+        </div>
+        <div class="product-item">
+            <span class="material-symbols-outlined">grocery</span>
+            <p>Coriander</p>
+        </div>
+    </div>
+
+    <p class="footer-text">... that's all ...</p>
+
+</body>
+</html>

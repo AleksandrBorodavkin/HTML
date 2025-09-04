@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Cheatsheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CSS Position Cheatsheet</h1>
+
+    <div class="container">
+        <h2>position: static; (default)</h2>
+        <div class="box static">Static</div>
+        <p>Элементы с <code>position: static;</code> отображаются в обычном потоке документа. Свойства <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code> не применяются.</p>
+    </div>
+
+    <div class="container">
+        <h2>position: relative;</h2>
+        <div class="box relative-parent">
+            <div class="box relative">Relative</div>
+        </div>
+        <p>Элемент с <code>position: relative;</code> позиционируется относительно своего нормального положения. Можно использовать <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> для смещения.</p>
+    </div>
+
+    <div class="container relative-parent-for-absolute">
+        <h2>position: absolute;</h2>
+        <div class="box absolute">Absolute</div>
+        <p>Элемент с <code>position: absolute;</code> позиционируется относительно ближайшего позиционированного предка (не static). Если такого предка нет, то относительно <code>&lt;body&gt;</code>.</p>
+    </div>
+
+    <div class="container">
+        <h2>position: fixed;</h2>
+        <div class="box fixed">Fixed</div>
+        <p>Элемент с <code>position: fixed;</code> позиционируется относительно окна браузера. Он не прокручивается вместе со страницей.</p>
+    </div>
+
+    <div class="container z-index-container">
+        <h2>z-index</h2>
+        <div class="box z-box z-one">z-index: 1</div>
+        <div class="box z-box z-two">z-index: 2</div>
+        <div class="box z-box z-three">z-index: 3</div>
+        <div class="box z-box z-auto">z-index: auto (0)</div>
+        <p>Свойство <code>z-index</code> управляет стековым порядком позиционированных элементов. Элемент с большим <code>z-index</code> будет выше элемента с меньшим.</p>
+    </div>
+
+    <div class="scroll-spacer"></div>
+
+    <div class="container sticky-container">
+        <h2>position: sticky;</h2>
+        <div class="box sticky">Sticky</div>
+        <p>Элемент с <code>position: sticky;</code> ведет себя как <code>relative</code>, пока не достигнет определенной точки при прокрутке, после чего "залипает" и ведет себя как <code>fixed</code>.</p>
+    </div>
+
+    <div class="scroll-spacer"></div>
+
+</body>
+</html>

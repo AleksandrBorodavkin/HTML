@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с футером</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+        footer {
+            background-color: #33475b;
+            color: #ffffff;
+            padding: 2rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 1.5rem;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer li {
+            color: #ffffff;
+        }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .footer-social a {
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>News</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Contacts</li>
+                    <li>Privacy & cookies</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <span class="fa-brands fa-facebook-f">
+                <span class="fa-brands fa-instagram">
+                <span class="fa-brands fa-youtube">
+            </div>
+        </div>
+        <hr  >
+        <div class="footer-copyright">
+            <p>Copyright &copy; Company 2018 - 2019</p>
+        </div>
+    </footer>
+</body>
+</html>
