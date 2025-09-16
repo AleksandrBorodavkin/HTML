@@ -1,0 +1,62 @@
+site_report:
+  main_page:
+    url: https://java41.ru/
+    title: Cubishi - Главная
+    headers:
+      - level: 2
+        text: Cubishi
+      - level: 3
+        text: Каталог товаров
+      - level: 3
+        text: Создай свой уникальный набор
+      - level: 3
+        text: Тематические наборы
+    links:
+      - text: Все товары
+        url: /products/
+      - text: Главная
+        url: "#hero"
+      - text: Каталог
+        url: "#catalog"
+      - text: Конструктор
+        url: "#create"
+      - text: Контакты
+        url: "#contacts"
+    buttons:
+      - text: Поиск
+      - text: Корзина
+      - text: Меню
+      - text: Войти
+  catalog_page:
+    url: https://java41.ru/products/
+    title: Каталог
+    headers:
+      - level: 3
+        text: Каталог товаров
+    products:
+      - text: Набор 1
+        url: /products/21/
+      - text: Набор 2
+        url: /products/22/
+      - text: Набор 3
+        url: /products/23/
+      - text: 2D Бабочка
+        url: /products/2d-models/2d-animals/2d-butterfly-17/
+      # ... and so on for all products
+  login_modal:
+    header:
+      level: 4
+      text: Вход
+    form:
+      inputs:
+        - type: textbox
+          name: Номер телефона
+      buttons:
+        - text: Войти
+    social_logins:
+      - provider: google
+        url: /auth/google/login/
+      - provider: vk
+        url: /auth/vk/login/
+      - provider: yandex
+        url: /auth/yandex/login/

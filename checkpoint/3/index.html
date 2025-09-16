@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дневник студента - Настройки</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- Навигационное меню -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#" title="Home">
+          <i class="bi bi-laptop me-2"></i>
+        </a>
+        <div class="navbar-nav">
+          <a class="nav-link text-white" href="#">Home</a>
+          <a class="nav-link text-white" href="#">Homework</a>
+          <a class="nav-link active fw-bold" href="#">Settings</a>
+        </div>
+        <div class="ms-auto">
+          <a href="#" aria-label="Profile" title="Profile Picture">
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9InNhbG1vbiIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjE2IiByPSI2IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzAgMzJDMzAgMjcuNTgyIDI1LjUyIDI0IDIwIDI0UzEwIDI3LjU4MiAxMCAzMkgzMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg=="
+              alt="Profile"
+              class="rounded-circle"
+              width="40"
+              height="40"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <div class="container">
+      <div class="text-center my-4 fs-5 text-dark">
+        Settings
+      </div>
+
+      <!-- Заголовки секций -->
+      <div class="bg-info bg-opacity-10 p-3 mb-4">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <h6 class="mb-0 fw-bold text-dark">AVATAR</h6>
+          </div>
+          <div class="col-md-4">
+            <h6 class="mb-0 fw-bold text-dark">STUDENT'S INFO</h6>
+          </div>
+          <div class="col-md-4">
+            <h6 class="mb-0 fw-bold text-dark">CHANGE PASSWORD</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Основной контент -->
+      <div class="row">
+        <!-- Блок загрузки аватара -->
+        <div class="col-md-4">
+          <div class="text-center">
+            <div class="mb-4">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjYwIiBmaWxsPSJzYWxtb24iLz4KPGNpcmNsZSBjeD0iNjAiIGN5PSI0OCIgcj0iMTgiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik05MCA5NkM5MCA4Mi43NDYgNzcuMjU0IDcyIDYwIDcyUzMwIDgyLjc0NiAzMCA5Nkg5MFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg=="
+                alt="Profile Avatar"
+                class="rounded-circle mb-3"
+                width="120"
+                height="120"
+              />
+            </div>
+            <button class="btn btn-secondary">Choose photo</button>
+          </div>
+        </div>
+
+        <!-- Форма с личными данными -->
+        <div class="col-md-4">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="First name" />
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Last name" />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Phone number" />
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Address" />
+            </div>
+            <div class="mb-3">
+              <input type="url" class="form-control" placeholder="FB link" />
+            </div>
+            <button type="submit" class="btn btn-secondary">Save changes</button>
+          </form>
+        </div>
+
+        <!-- Форма изменения пароля -->
+        <div class="col-md-4">
+          <form>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Old password" />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="New password" />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Repeat password" />
+            </div>
+            <button type="submit" class="btn btn-secondary">Change password</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

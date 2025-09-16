@@ -1,0 +1,219 @@
+/* Переменные */
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #ecf0f1;
+$text-color: #34495e;
+$border-color: #bdc3c7;
+$header-bg: $primary-color;
+$header-text: white;
+$card-bg: white;
+$code-bg: #2c3e50;
+$code-text: #f1c40f;
+
+/* Миксины */
+@mixin card-style {
+    background-color: $card-bg;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Базовые стили */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    font-size: 16px; /* Базовый размер для rem */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; border-bottom: 2px solid $primary-color; padding-bottom: 0.5rem; margin-top: 2rem; }
+h3 { font-size: 1.5rem; margin-top: 1.5rem; }
+h4 { font-size: 1.2rem; }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+code {
+    background-color: $code-bg;
+    color: $code-text;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+    background-color: $code-bg;
+    color: $code-text;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    code {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+/* Компоненты */
+header {
+    background-color: $header-bg;
+    color: $header-text;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    @include card-style;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Стили для элементов форм */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="month"],
+input[type="week"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+    margin-top: 0.5rem;
+
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+    }
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    &[type="reset"] {
+        background-color: #e74c3c;
+        &:hover {
+            background-color: darken(#e74c3c, 10%);
+        }
+    }
+}
+
+fieldset {
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+
+    legend {
+        padding: 0 0.5rem;
+        font-weight: 600;
+        color: $primary-color;
+    }
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        padding: 1.5rem 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+}

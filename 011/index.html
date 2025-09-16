@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по формам HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Шпаргалка по формам HTML</h1>
+    </header>
+
+    <main>
+        <!-- Тег <form> -->
+        <section id="form-tag">
+            <h2>Тег <code>&lt;form&gt;</code></h2>
+            <p>Основной контейнер для всех элементов формы.</p>
+            <pre><code>&lt;form action="/submit-url" method="post" target="_blank" enctype="multipart/form-data" novalidate autocomplete="on"&gt;
+  ... элементы формы ...
+&lt;/form&gt;</code></pre>
+            <ul>
+                <li><code>action</code>: URL-адрес, на который отправляются данные формы.</li>
+                <li><code>method</code>: HTTP-метод для отправки данных (<code>get</code> или <code>post</code>).</li>
+                <li><code>target</code>: Определяет, где отображать ответ после отправки формы (<code>_self</code>, <code>_blank</code>, <code>_parent</code>, <code>_top</code>).</li>
+                <li><code>enctype</code>: Тип кодирования данных при отправке (<code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, <code>text/plain</code>). Используйте <code>multipart/form-data</code> для загрузки файлов.</li>
+                <li><code>novalidate</code>: Отключает встроенную проверку (валидацию) полей формы браузером.</li>
+                <li><code>autocomplete</code>: Включает или отключает автозаполнение для всей формы (<code>on</code> или <code>off</code>).</li>
+            </ul>
+        </section>
+
+        <!-- Элементы ввода -->
+        <section id="input-elements">
+            <h2>Элементы ввода <code>&lt;input&gt;</code></h2>
+            <p>Самый универсальный элемент формы. Его поведение зависит от атрибута <code>type</code>.</p>
+
+            <h3>Основные типы:</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4><code>type="text"</code></h4>
+                    <p>Однострочное текстовое поле.</p>
+                    <input type="text" placeholder="Введите текст...">
+                </div>
+                <div class="card">
+                    <h4><code>type="password"</code></h4>
+                    <p>Поле для ввода пароля (символы скрыты).</p>
+                    <input type="password" placeholder="Введите пароль...">
+                </div>
+                <div class="card">
+                    <h4><code>type="submit"</code></h4>
+                    <p>Кнопка для отправки формы.</p>
+                    <input type="submit" value="Отправить">
+                </div>
+                <div class="card">
+                    <h4><code>type="button"</code></h4>
+                    <p>Просто кнопка (действие задается через JS).</p>
+                    <input type="button" value="Нажми меня">
+                </div>
+                <div class="card">
+                    <h4><code>type="reset"</code></h4>
+                    <p>Кнопка для сброса всех полей формы к их исходным значениям.</p>
+                    <input type="reset" value="Сбросить">
+                </div>
+                <div class="card">
+                    <h4><code>type="checkbox"</code></h4>
+                    <p>Флажок (чекбокс) для выбора нескольких опций.</p>
+                    <label><input type="checkbox" name="option1"> Опция 1</label><br>
+                    <label><input type="checkbox" name="option2"> Опция 2</label>
+                </div>
+                <div class="card">
+                    <h4><code>type="radio"</code></h4>
+                    <p>Переключатель (радиокнопка) для выбора одной опции из группы (группируются по атрибуту <code>name</code>).</p>
+                    <label><input type="radio" name="gender" value="male"> Мужской</label><br>
+                    <label><input type="radio" name="gender" value="female"> Женский</label>
+                </div>
+                <div class="card">
+                    <h4><code>type="file"</code></h4>
+                    <p>Поле для выбора файла для загрузки на сервер.</p>
+                    <input type="file">
+                </div>
+            </div>
+
+            <h3>Типы для ввода данных (HTML5):</h3>
+             <div class="grid">
+                <div class="card">
+                    <h4><code>type="date"</code></h4>
+                    <p>Поле для выбора даты.</p>
+                    <input type="date">
+                </div>
+                <div class="card">
+                    <h4><code>type="datetime-local"</code></h4>
+                    <p>Выбор даты и времени (без часового пояса).</p>
+                    <input type="datetime-local">
+                </div>
+                <div class="card">
+                    <h4><code>type="time"</code></h4>
+                    <p>Поле для выбора времени.</p>
+                    <input type="time">
+                </div>
+                <div class="card">
+                    <h4><code>type="month"</code></h4>
+                    <p>Поле для выбора месяца и года.</p>
+                    <input type="month">
+                </div>
+                <div class="card">
+                    <h4><code>type="week"</code></h4>
+                    <p>Поле для выбора недели и года.</p>
+                    <input type="week">
+                </div>
+                <div class="card">
+                    <h4><code>type="email"</code></h4>
+                    <p>Поле для ввода email (с базовой валидацией).</p>
+                    <input type="email" placeholder="user@example.com">
+                </div>
+                <div class="card">
+                    <h4><code>type="number"</code></h4>
+                    <p>Поле для ввода числа.</p>
+                    <input type="number" placeholder="42" min="0" max="100" step="2">
+                </div>
+                <div class="card">
+                    <h4><code>type="tel"</code></h4>
+                    <p>Поле для ввода номера телефона (без специальной валидации).</p>
+                    <input type="tel" placeholder="+7 (999) 999-99-99">
+                </div>
+                <div class="card">
+                    <h4><code>type="url"</code></h4>
+                    <p>Поле для ввода URL-адреса.</p>
+                    <input type="url" placeholder="https://example.com">
+                </div>
+                <div class="card">
+                    <h4><code>type="search"</code></h4>
+                    <p>Текстовое поле для поисковых запросов.</p>
+                    <input type="search" placeholder="Поиск...">
+                </div>
+                <div class="card">
+                    <h4><code>type="range"</code></h4>
+                    <p>Ползунок для выбора числа в диапазоне.</p>
+                    <input type="range" min="0" max="100">
+                </div>
+                <div class="card">
+                    <h4><code>type="color"</code></h4>
+                    <p>Элемент для выбора цвета.</p>
+                    <input type="color">
+                </div>
+            </div>
+        </section>
+
+        <!-- Другие элементы форм -->
+        <section id="other-elements">
+            <h2>Другие элементы форм</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4><code>&lt;textarea&gt;</code></h4>
+                    <p>Многострочное текстовое поле.</p>
+                    <textarea rows="4" cols="50" placeholder="Введите длинный текст..."></textarea>
+                </div>
+                <div class="card">
+                    <h4><code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code></h4>
+                    <p>Выпадающий список.</p>
+                    <select>
+                        <optgroup label="Группа 1">
+                            <option value="1">Опция 1.1</option>
+                            <option value="2">Опция 1.2</option>
+                        </optgroup>
+                        <optgroup label="Группа 2">
+                            <option value="3">Опция 2.1</option>
+                            <option value="4" disabled>Опция 2.2 (отключена)</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="card">
+                    <h4><code>&lt;button&gt;</code></h4>
+                    <p>Более гибкая кнопка, чем <code>&lt;input type="button"&gt;</code>. Может содержать HTML.</p>
+                    <button type="button">Кнопка с <strong>HTML</strong></button>
+                </div>
+                <div class="card">
+                    <h4><code>&lt;label&gt;</code></h4>
+                    <p>Связывает текстовую метку с элементом формы. Улучшает доступность.</p>
+                    <label for="user-id">Имя пользователя:</label>
+                    <input type="text" id="user-id">
+                </div>
+                <div class="card">
+                    <h4><code>&lt;fieldset&gt;</code> и <code>&lt;legend&gt;</code></h4>
+                    <p>Группирует связанные элементы в форме.</p>
+                    <fieldset>
+                        <legend>Личные данные:</legend>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name"><br><br>
+                        <label for="email-fs">Email:</label>
+                        <input type="email" id="email-fs">
+                    </fieldset>
+                </div>
+                <div class="card">
+                    <h4><code>&lt;datalist&gt;</code></h4>
+                    <p>Создает список предопределенных опций для автозаполнения поля <code>&lt;input&gt;</code>.</p>
+                    <label for="browser">Браузер:</label>
+                    <input list="browsers" id="browser" name="browser">
+                    <datalist id="browsers">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                        <option value="Opera">
+                    </datalist>
+                </div>
+                 <div class="card">
+                    <h4><code>&lt;progress&gt;</code></h4>
+                    <p>Индикатор выполнения задачи.</p>
+                    <progress value="70" max="100">70%</progress>
+                </div>
+                <div class="card">
+                    <h4><code>&lt;meter&gt;</code></h4>
+                    <p>Измеритель значения в известном диапазоне.</p>
+                    <label for="disk_d">Диск D:</label>
+                    <meter id="disk_d" value="0.6">60%</meter>
+                </div>
+            </div>
+        </section>
+
+        <!-- Атрибуты элементов -->
+        <section id="attributes">
+            <h2>Важные атрибуты элементов</h2>
+            <ul>
+                <li><code>name</code>: Имя элемента, используется для отправки данных на сервер.</li>
+                <li><code>value</code>: Значение элемента.</li>
+                <li><code>placeholder</code>: Подсказка в текстовых полях, исчезающая при вводе.</li>
+                <li><code>required</code>: Указывает, что поле обязательно для заполнения.</li>
+                <li><code>disabled</code>: Блокирует доступ к элементу. Данные не отправляются.</li>
+                <li><code>readonly</code>: Поле нельзя редактировать, но его данные отправляются на сервер.</li>
+                <li><code>checked</code>: Заранее выбирает `checkbox` или `radio`.</li>
+                <li><code>selected</code>: Заранее выбирает `option` в `select`.</li>
+                <li><code>multiple</code>: Позволяет выбрать несколько значений (`select`) или файлов (`input type="file"`).</li>
+                <li><code>min</code>, <code>max</code>, <code>step</code>: Для числовых полей - минимальное, максимальное значение и шаг.</li>
+                <li><code>minlength</code>, <code>maxlength</code>: Минимальная и максимальная длина для текстовых полей.</li>
+                <li><code>pattern</code>: Регулярное выражение для проверки значения поля.</li>
+                <li><code>for</code>: (у `label`) связывает метку с элементом по его `id`.</li>
+                <li><code>form</code>: (у элемента) связывает элемент с формой по ее `id` (полезно, если элемент находится вне тега `<form>`).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Создано с помощью Gemini</p>
+    </footer>
+
+</body>
+</html>

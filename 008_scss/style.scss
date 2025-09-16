@@ -1,0 +1,51 @@
+$span-color: #3498db;
+$bg-color: #ecf0f1;
+$font-stack: Helvetica, sans-serif;
+$font-size: 16px;
+$padding: 10px;
+$border-radius: 5px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+$hover-bg-color: darken($bg-color, 5%); 
+$transition-duration: 0.3s;
+$transition-ease: ease-in-out;
+$border-color: #ddd;
+@mixin center-flex($bg-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: background-color $transition-duration $transition-ease;
+    span {@include center-flex(#06838b);
+        font-size: 33px;
+    }    &:hover {
+        background-color: $hover-bg-color;
+    }
+    .test, .test2 {
+        color: $span-color;
+        font-family: $font-stack;
+        font-size: $font-size;
+        padding: $padding;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        transition: background-color $transition-duration $transition-ease;
+    }
+
+
+
+}

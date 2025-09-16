@@ -1,0 +1,100 @@
+body {
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+.chat {
+  max-width: 760px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.message-row.left {
+  flex-direction: row;
+}
+.message-row.left .bubble {
+  margin-left: 18px;
+}
+.message-row.left .userinfo {
+  text-align: left;
+  align-items: flex-end;
+}
+.message-row.right {
+  flex-direction: row-reverse;
+}
+.message-row.right .bubble {
+  margin-right: 18px;
+}
+.message-row.right .userinfo {
+  text-align: right;
+  align-items: flex-start;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.time {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin: 4px 0;
+  background-size: cover;
+}
+.avatar.avatar-annie {
+  background: #9e5aaa url("https://img.icons8.com/ios-filled/50/ffffff/user-female-circle.png") no-repeat center/65%;
+}
+.avatar.avatar-jack {
+  background: #347bda url("https://img.icons8.com/ios-filled/50/ffffff/user-male-circle.png") no-repeat center/65%;
+}
+
+.bubble {
+  max-width: 400px;
+  min-width: 110px;
+  padding: 15px 22px;
+  font-size: 15px;
+  border-radius: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+.bubble-annie {
+  background: #f8c8d7;
+  color: #40354e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 5px;
+}
+
+.bubble-jack {
+  background: #b0eafe;
+  color: #244156;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 18px;
+}/*# sourceMappingURL=styles.css.map */
